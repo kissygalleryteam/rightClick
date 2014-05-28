@@ -144,8 +144,8 @@ KISSY.add(function(S, Node, Base, Event, Juicer) {
             var curNode = $(this.get('node')),
                 container = S.one(this.get('container')),
                 left, top;
-            var mouseX = e.pageX,
-                mouseY = e.pageY,
+            var mouseX = e.pageX||e.x,
+                mouseY = e.pageY||e.y,
                 offsetX = this.get('offset').x,
                 offsetY = this.get('offset').y;
             container = container || $('body');
